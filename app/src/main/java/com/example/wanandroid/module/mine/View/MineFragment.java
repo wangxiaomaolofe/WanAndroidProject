@@ -8,12 +8,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import me.jessyan.autosize.AutoSize;
 
 public class MineFragment extends Fragment {
 
 	@Nullable
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		AutoSize.autoConvertDensity(getActivity(), 1080, true);
 		return LayoutInflater.from(container.getContext()).inflate(R.layout.fragment_mine, container, false);
 	}
 }
